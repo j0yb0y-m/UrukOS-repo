@@ -25,13 +25,13 @@ Rules (from AGENT_README.md):
 
 ## Building srpms for COPR
 
-`.copr/Makefile` implements the `make_srpm` method. COPR invokes roughly:
+`.copr/Makefile` implements the `make srpm` method. COPR invokes:
 
 ```bash
-make srpm outdir=<out> spec=<spec> sources=<srcdir>
+make -f .copr/Makefile srpm outdir=<dir> spec=<spec-path>
 ```
 
-It stages `packages/<name>/files/` plus any local sources and runs `spectool -g` for remote URLs, then `rpmbuild -bs`.
+The `srpm` target installs rpm-build/rpmdevtools if missing, stages `packages/<name>/files/`, fetches remote `Source0` URLs with `spectool -g`, and runs `rpmbuild -bs`, leaving the `.src.rpm` in `outdir`. Note: COPR undefines `%dist` for SRPM builds, so srpm names have no `.fc44` suffix there.
 
 ## Local verification
 
@@ -53,5 +53,4 @@ for s in packages/*/*.spec; do rpmbuild -bs ... "$s"; done   # build srpms
 
 ## TODO(verify)
 
-- Exact COPR `make_srpm` variable names (`outdir`/`spec`/`sources`) — verify against COPR docs before wiring the webhook.
 - LazyVim starter files for `/etc/skel/.config/nvim` (planned M5).

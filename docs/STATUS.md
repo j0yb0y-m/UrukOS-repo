@@ -22,5 +22,4 @@ Milestone: M3
 - Create/store GPG signing key
 
 ## TODO(verify)
-- Exact COPR make_srpm variable names (outdir/spec/sources)
 - LazyVim starter vendoring for /etc/skel/.config/nvim (planned M5)
