@@ -3,10 +3,11 @@ Last updated: 2026-10-07
 Milestone: M1
 
 ## Done
-- Repo scaffolded: README.md, LICENSE (MIT), .gitignore, docs/STATUS.md | `ls` of repo folder
+- Repo scaffolded: README.md, LICENSE (MIT), .gitignore, docs/STATUS.md
+- Published to GitHub: `gh repo view` succeeds, branch `main` pushed, topics added (fedora, linux-distribution, kde-plasma, pentesting)
 
 ## In progress
-- git init / gh repo create / push (M1, section 4.4)
+- <none>
 
 ## Blocked
 - <none>
