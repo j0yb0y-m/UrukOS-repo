@@ -1,0 +1,7 @@
+*.iso
+*.rpm
+*.src.rpm
+outdir/
+__pycache__/
+.venv/
+*.log
